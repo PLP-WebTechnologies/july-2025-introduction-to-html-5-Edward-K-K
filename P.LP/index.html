@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Fundamentals</h1>
+        <p>Understanding Variables, Conditionals, Functions, Loops, and DOM Interactions</p>
+    </header>
+    
+    <div class="container">
+        <!-- Part 1: Variables and Conditionals -->
+        <section class="section">
+            <h2>Part 1: Variables and Conditionals</h2>
+            <p>JavaScript provides three ways to declare variables: <span class="highlight">var</span>, <span class="highlight">let</span>, and <span class="highlight">const</span>.</p>
+            
+            <div class="code-block">
+                // Variable declarations<br>
+                var myVar = "Hello"; // Function-scoped<br>
+                let myLet = 42; // Block-scoped<br>
+                const myConst = true; // Block-scoped constant<br><br>
+                
+                // Conditional example<br>
+                let temperature = 28;<br>
+                if (temperature > 30) {<br>
+                &nbsp;&nbsp;console.log("It's hot outside!");<br>
+                } else if (temperature > 20) {<br>
+                &nbsp;&nbsp;console.log("The weather is pleasant.");<br>
+                } else {<br>
+                &nbsp;&nbsp;console.log("It's cold outside!");<br>
+                }
+            </div>
+            
+            <div class="interactive-area">
+                <div class="card">
+                    <h3>Temperature Check</h3>
+                    <p>Enter a temperature to see the conditional in action:</p>
+                    <input type="number" id="tempInput" placeholder="Enter temperature">
+                    <button id="tempButton">Check Temperature</button>
+                    <div class="output" id="tempOutput"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 2: Functions -->
+        <section class="section">
+            <h2>Part 2: Functions</h2>
+            <p>Functions are reusable blocks of code that perform a specific task.</p>
+            
+            <div class="code-block">
+                // Function declaration<br>
+                function greet(name) {<br>
+                &nbsp;&nbsp;return `Hello, ${name}!`;<br>
+                }<br><br>
+                
+                // Function expression<br>
+                const calculateArea = function(width, height) {<br>
+                &nbsp;&nbsp;return width * height;<br>
+                };<br><br>
+                
+                // Arrow function<br>
+                const multiply = (a, b) => a * b;
+            </div>
+            
+            <div class="interactive-area">
+                <div class="card">
+                    <h3>Greeting Function</h3>
+                    <input type="text" id="nameInput" placeholder="Enter your name">
+                    <button id="greetButton">Greet Me</button>
+                    <div class="output" id="greetingOutput"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Area Calculation</h3>
+                    <input type="number" id="widthInput" placeholder="Width">
+                    <input type="number" id="heightInput" placeholder="Height">
+                    <button id="areaButton">Calculate Area</button>
+                    <div class="output" id="areaOutput"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 3: Loops -->
+        <section class="section">
+            <h2>Part 3: Loops</h2>
+            <p>Loops allow you to execute a block of code multiple times.</p>
+            
+            <div class="code-block">
+                // For loop<br>
+                for (let i = 0; i < 5; i++) {<br>
+                &nbsp;&nbsp;console.log(`Iteration ${i}`);<br>
+                }<br><br>
+                
+                // While loop<br>
+                let count = 0;<br>
+                while (count < 3) {<br>
+                &nbsp;&nbsp;console.log(`Count: ${count}`);<br>
+                &nbsp;&nbsp;count++;<br>
+                }<br><br>
+                
+                // Loop through an array<br>
+                const fruits = ["Apple", "Banana", "Orange"];<br>
+                for (let fruit of fruits) {<br>
+                &nbsp;&nbsp;console.log(fruit);<br>
+                }
+            </div>
+            
+            <div class="interactive-area">
+                <div class="card">
+                    <h3>For Loop Example</h3>
+                    <p>Click to see a for loop that counts to 5:</p>
+                    <button id="forLoopButton">Run For Loop</button>
+                    <div class="output" id="forLoopOutput"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Array Iteration</h3>
+                    <p>Click to iterate through an array of fruits:</p>
+                    <button id="arrayButton">Iterate Fruits</button>
+                    <div class="output" id="arrayOutput"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 4: DOM Interactions -->
+        <section class="section">
+            <h2>Part 4: DOM Interactions</h2>
+            <p>The Document Object Model (DOM) allows JavaScript to interact with HTML elements.</p>
+            
+            <div class="code-block">
+                // Changing text content<br>
+                document.getElementById('myElement').textContent = 'New text';<br><br>
+                
+                // Handling events<br>
+                button.addEventListener('click', function() {<br>
+                &nbsp;&nbsp;alert('Button clicked!');<br>
+                });<br><br>
+                
+                // Modifying styles<br>
+                element.style.backgroundColor = 'blue';<br><br>
+                
+                // Creating new elements<br>
+                const newDiv = document.createElement('div');<br>
+                newDiv.textContent = 'I am a new div!';<br>
+                document.body.appendChild(newDiv);
+            </div>
+            
+            <div class="interactive-area">
+                <div class="card">
+                    <h3>Change Text Content</h3>
+                    <p id="textToChange">This text will change when you click the button.</p>
+                    <button id="changeTextButton">Change Text</button>
+                </div>
+                
+                <div class="card">
+                    <h3>Toggle Background Color</h3>
+                    <p>Click to toggle the background color of this card.</p>
+                    <button id="colorButton">Toggle Color</button>
+                </div>
+                
+                <div class="card">
+                    <h3>Add New Item</h3>
+                    <input type="text" id="newItemInput" placeholder="Enter item">
+                    <button id="addItemButton">Add Item</button>
+                    <ul id="itemList"></ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>JavaScript Fundamentals Project &copy; 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
