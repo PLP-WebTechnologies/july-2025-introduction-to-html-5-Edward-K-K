@@ -3,70 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Box Model Demo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Layout Demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Understanding the CSS Box Model</h1>
-        <p>Every element in web design is a rectangular box</p>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <h1 class="logo">Flex & Grid Demo</h1>
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="#flexbox-section">Flexbox</a></li>
+                <li><a href="#grid-section">Grid</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#content">Content</a></li>
-            <li><a href="#padding">Padding</a></li>
-            <li><a href="#border">Border</a></li>
-            <li><a href="#margin">Margin</a></li>
-        </ul>
-    </nav>
-    
+
+    <!-- Main Content Area -->
     <main>
-        <section id="content" class="box-model-section">
-            <h2>Content Area</h2>
-            <div class="content-box">
-                <p>This is the actual content of the box, where text and images appear.</p>
-                <p>The size is determined by the width and height properties.</p>
+        <!-- Flexbox Section -->
+        <section id="flexbox-section" class="flex-container">
+            <h2>Flexible Layout with Flexbox</h2>
+            <div class="flex-item">
+                <h3>Card 1</h3>
+                <p>This is a flex item. Flexbox is great for one-dimensional layouts, either rows or columns.</p>
+            </div>
+            <div class="flex-item">
+                <h3>Card 2</h3>
+                <p>Items within a flex container can be aligned and distributed easily. We'll use `space-around` for this example.</p>
+            </div>
+            <div class="flex-item">
+                <h3>Card 3</h3>
+                <p>On smaller screens, these items will wrap to a new line, thanks to `flex-wrap: wrap`.</p>
             </div>
         </section>
-        
-        <section id="padding" class="box-model-section">
-            <h2>Padding</h2>
-            <div class="padding-box">
-                <p>Padding creates space around the content, inside the border.</p>
-                <p>It helps separate content from the border.</p>
-            </div>
-        </section>
-        
-        <section id="border" class="box-model-section">
-            <h2>Border</h2>
-            <div class="border-box">
-                <p>The border surrounds the padding (if any) and content.</p>
-                <p>It can be styled with different colors, widths, and styles.</p>
-            </div>
-        </section>
-        
-        <section id="margin" class="box-model-section">
-            <h2>Margin</h2>
-            <div class="margin-box">
-                <p>Margin creates transparent space outside the border.</p>
-                <p>It separates the element from other elements on the page.</p>
-            </div>
-        </section>
-        
-        <section class="comparison">
-            <h2>Box Model Comparison</h2>
-            <div class="comparison-container">
-                <div class="box content-demo">Content</div>
-                <div class="box padding-demo">Padding</div>
-                <div class="box border-demo">Border</div>
-                <div class="box margin-demo">Margin</div>
-            </div>
+
+        <!-- Grid Section -->
+        <section id="grid-section" class="grid-container">
+            <h2>Two-Dimensional Layout with Grid</h2>
+            <div class="grid-item header-item">Header</div>
+            <div class="grid-item sidebar-item">Sidebar</div>
+            <div class="grid-item content-item">Main Content. CSS Grid is ideal for overall page structure, with rows and columns working at the same time.</div>
+            <div class="grid-item footer-item">Footer</div>
         </section>
     </main>
-    
-    <footer>
-        <p>CSS Box Model Demonstration &copy; 2023</p>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p>&copy; 2025 Responsive Layout Demo</p>
     </footer>
+
 </body>
 </html>
